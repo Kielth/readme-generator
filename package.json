@@ -1,0 +1,26 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Generates a readme file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kielth/readme-generator.git"
+  },
+  "keywords": [
+    "Node",
+    "JavaScript"
+  ],
+  "author": "Big Joe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kielth/readme-generator/issues"
+  },
+  "homepage": "https://github.com/Kielth/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  }
+}
