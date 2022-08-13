@@ -1,9 +1,9 @@
 
-  # sf 
+  # sdf 
   ![License badges](https://img.shields.io/badge/license-MIT-blue)
   
   ## Description
-  sdf  
+  sd  
   
   ## Table of Contents
   - [Description](#description)
@@ -15,10 +15,10 @@
   - [Questions](#questions)
 
   ## Installation
-  sd
+  fs
   
   ## Usage
-  f
+  df
   
   ## License
   MIT
@@ -26,12 +26,17 @@
   A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
   ## Contributing
-  sdf
+  f
 
   ## Tests
   sdf
   
   ## Questions
-  Visit mu github Kielth("https://github.com/Kielth")
-
-  for any questons or comments, please email me at: joefish1973@gmail.com 
+  The link to my Github profile is:
+  Kielth("https://github.com/Kielth")
+  
+  For any questions or comments please email me:
+  joefish1973@gmail;.com
+  
+  The deployed link for this project is here:
+  https://github.com/Kielth/readme-generator/blob/main/Develop/README.md
