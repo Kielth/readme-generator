@@ -3,7 +3,7 @@
   ![License badges](https://img.shields.io/badge/license-MIT-blue)
   
   ## Description
-  fs  
+  fd  
   
   ## Table of Contents
   - [Description](#description)
@@ -15,10 +15,10 @@
   - [Questions](#questions)
 
   ## Installation
-  f
+  sf
   
   ## Usage
-  dsf
+  sd
   
   ## License
   MIT
@@ -33,10 +33,10 @@
   
   ## Questions
   The link to my Github profile is:
-  ![Kielth]("https://github.com/Kielth")
+  [Kielth]("https://github.com/Kielth")
   
   For any questions or comments please email me:
-  sd
+  sdf
   
   The deployed link for this project is here:
-  asad
+  sdf
