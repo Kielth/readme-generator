@@ -41,8 +41,9 @@ const writeMarkDown = (dataObj, badgeUrl) => {
   ${dataObj.test}
   
   ## Questions
-  Visit mu github [${dataObj.username}]("https://github.com/${dataObj.username}")
-   for any questons or comments, please email me at: ${dataObj.email} `
+  Visit mu github ${dataObj.username}("https://github.com/${dataObj.username}")
+
+  for any questons or comments, please email me at: ${dataObj.email} `
 ;}
 
 function selectBadge(badgeChoice){
