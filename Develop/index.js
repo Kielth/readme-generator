@@ -11,6 +11,24 @@ const writeMarkDown = (dataObj) => {
   ${dataObj.description}  
   
   ## Table of Contents
+- [Description](#description)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contribute)
+- [Test](#test)
+- [Questions](#email)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contribute)
+- [Test](#test)
+- [Questions](#email)
+- [Installation](#install)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contribute)
+- [Test](#test)
+- [Questions](#email)
+
     
   ## Installation
   ${dataObj.install}
