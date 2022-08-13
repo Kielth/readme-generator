@@ -1,9 +1,9 @@
 
-  # s 
+  # sfd 
   ![License badges](https://img.shields.io/badge/license-MIT-blue)
   
   ## Description
-  fd  
+  sd  
   
   ## Table of Contents
   - [Description](#description)
@@ -15,10 +15,11 @@
   - [Questions](#questions)
 
   ## Installation
-  sf
+  ff
   
   ## Usage
-  sd
+  s
+  ![screenshot](./assets/images/screenshot.jpg)
   
   ## License
   MIT
@@ -26,17 +27,24 @@
   A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
   ## Contributing
-  sdf
+  sdfsdf
 
   ## Tests
   sdf
   
+  Tara Evans
   ## Questions
   The link to my Github profile is:
-  [Kielth]("https://github.com/Kielth")
+  [Kielth](https://github.com/Kielth)
+
+  For any questions or comments please email me:
+  ZSXD
+
+  The deployed link for this project is here:
+  sad
   
   For any questions or comments please email me:
-  sdf
+  ZSXD
   
   The deployed link for this project is here:
-  sdf
+  sad
