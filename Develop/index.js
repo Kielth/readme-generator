@@ -1,11 +1,15 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require('inquirer');
+let badgeUrl;
+let licenseText;
 //const { writeFile, copyFile } = require('./utils/generate-site');
 
-const writeMarkDown = (dataObj) => {
+const writeMarkDown = (dataObj, badgeUrl) => {
+  console.log ("8 " + badgeUrl);
   return `
   # ${dataObj.title} 
+  ![License badges](${badgeUrl})
   
   ## Description
   ${dataObj.description}  
@@ -19,7 +23,6 @@ const writeMarkDown = (dataObj) => {
   - [Test](#test)
   - [Questions](#questions)
 
-    
   ## Installation
   ${dataObj.install}
   
@@ -29,6 +32,8 @@ const writeMarkDown = (dataObj) => {
   ## License
   ${dataObj.license}
 
+  ${licenseText}
+
   ## Contributing
   ${dataObj.contribute}
 
@@ -36,8 +41,39 @@ const writeMarkDown = (dataObj) => {
   ${dataObj.test}
   
   ## Questions
-  ${dataObj.email}`
+   the link to my github profile is [${dataObj.username}]("https://github.com/${dataObj.username}")
+   for any questons or comments, please email me at: ${dataObj.email} `
 ;}
+
+function selectBadge(badgeChoice){
+  console.log("45 " + badgeChoice);
+  switch (badgeChoice.toString()){
+    
+    case "MIT":
+      badgeUrl = 'https://img.shields.io/badge/license-MIT-blue';
+      licenseText = "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
+      break;
+    case "GPLv3":
+      badgeUrl = "https://img.shields.io/badge/license-GPLv3-green";
+      licenseText = "Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights."
+      break;
+    case "Mozilla":
+      badgeUrl = "https://img.shields.io/badge/license-Mozilla-red";
+      licenseText = "Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work."
+      break;
+    case "Apache":
+      badgeUrl = "https://img.shields.io/badge/license-Apache-yellow";
+      licenseText = "A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
+      break;
+    case "Boost":
+     badgeUrl = "https://img.shields.io/badge/license-Boost-brightgreen";
+     licenseText = "A simple permissive license only requiring preservation of copyright and license notices for source (and not binary) distribution. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
+     break;
+    default:
+      console.log("None Selected " + badgechoice);
+      break;
+  } 
+}
 
 // TODO: Create an array of questions for user input
 const askQuestions = () => { 
@@ -99,7 +135,7 @@ const askQuestions = () => {
         type: 'list',
         name: 'license',
         message: 'Please choose a license',
-        choices: ['MIT', 'GNU GPLv3', 'Mozilla', 'Apache', 'Boost']
+        choices: ['MIT', 'GPLv3', 'Mozilla', 'Apache', 'Boost']
       },
       {
         type: 'input',
@@ -168,8 +204,10 @@ const askQuestions = () => {
       },
 ]).then(projectData => {
     console.log(projectData.title);
-    
-    writeToFile("README.md", writeMarkDown(projectData).toString() );
+    selectBadge(projectData.license);
+    console.log("198 " + projectData.license);
+    console.log("199 " + badgeUrl);
+    writeToFile("README.md", writeMarkDown(projectData, badgeUrl).toString() );
   });
 }
 
