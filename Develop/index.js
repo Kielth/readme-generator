@@ -3,8 +3,37 @@ const fs = require("fs");
 const inquirer = require('inquirer');
 //const { writeFile, copyFile } = require('./utils/generate-site');
 
+const writeMarkDown = (dataObj) => {
+  return `
+  # ${dataObj.title} 
+  
+  ## Description
+  ${dataObj.description}  
+  
+  ## Table of Contents
+    
+  ## Installation
+  ${dataObj.install}
+  
+  ## Usage
+  ${dataObj.usage}
+  
+  ## License
+  ${dataObj.license}
+
+  ## Contributing
+  ${dataObj.contribute}
+
+  ## Tests
+  ${dataObj.test}
+  
+  ## Questions
+  ${dataObj.email}`
+;}
+
 // TODO: Create an array of questions for user input
-const questions = [
+const askQuestions = () => { 
+    return inquirer.prompt([
     {
         type: 'input',
         name: 'title',
@@ -129,14 +158,25 @@ const questions = [
           }
         }
       },
-
-];
+]).then(projectData => {
+    console.log(projectData.title);
+    
+    writeToFile("README.md", writeMarkDown(projectData).toString() );
+  });
+}
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  askQuestions();
+}
 
 // Function call to initialize app
 init();
