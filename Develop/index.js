@@ -41,7 +41,7 @@ const writeMarkDown = (dataObj, badgeUrl) => {
   ${dataObj.test}
   
   ## Questions
-   the link to my github profile is [${dataObj.username}]("https://github.com/${dataObj.username}")
+  Visit mu github [${dataObj.username}]("https://github.com/${dataObj.username}")
    for any questons or comments, please email me at: ${dataObj.email} `
 ;}
 
